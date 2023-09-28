@@ -51,7 +51,7 @@ const Guide = () => {
   return (
     <Grid alignItems="stretch" justifyContent="center" direction="row" spacing={2} sx={{mt: 1, px:5}} container>
       <Grid xs={12}>
-        <Typography textAlign="center" variant="h4" sx={{color:"#000339", fontWeight: "bold"}}>Nuestros servicios</Typography>
+        <Typography mt={5} textAlign="center" variant="h4" sx={{color:"#000339", fontWeight: "bold"}}>Nuestros servicios</Typography>
       </Grid>
       <Grid xs={12} md={4} alignItems="space-between" sx={{mt:3}}>
         <Card sx={{m:4, height:'100%'}}>

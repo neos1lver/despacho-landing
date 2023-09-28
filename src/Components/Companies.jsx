@@ -56,10 +56,6 @@ const Companies = () => {
         </Typography>
       </Box>
     </CustomContainer>
-
-      <Container sx={{display: "flex", flexDirection: "column" }}>
-        <img src={logosImg} alt="logosimagen" />
-      </Container>
     </Box>;
 };
 

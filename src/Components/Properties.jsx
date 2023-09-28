@@ -5,6 +5,7 @@ import { properties } from "../properties";
 
 /* Imagenes */
 import despachoImg from "../media/despacho.jpg";
+import logoImg from "../media/logoXL.png";
 
 const Properties = () => {
   const PropertiesBox = styled(Box)(({ theme }) => ({
@@ -24,8 +25,8 @@ const Properties = () => {
   }));
 
   return (
-    <Grid container spacing={2} sx={{mt: 5, backgroundColor: "#F5FAFE", p: 5}}>
-      <Grid xs={12} md={6} alignItems="center" sx={{px:3}}>
+    <Grid container spacing={2} mt={5} p={7} sx={{ backgroundColor: "#F5FAFE"}}>
+      <Grid xs={12} md={8} alignItems="center" sx={{px:3}}>
         <Typography sx={{color:"#000339", fontSize: "35px", fontWeight: "bold"}}>
           Sobre nosotros
         </Typography>
@@ -51,10 +52,9 @@ const Properties = () => {
         </Typography>
       </Grid>
 
-      <Grid xs={12} md={6} sx={{p:5}}>
-        <img style={{maxWidth:'100%'}} src={despachoImg} alt="despachoImg"  />
+      <Grid xs={12} md={4} sx={{p:5}}>
+        <img style={{maxWidth:'100%'}} src={logoImg} alt="despachoImg"  />
       </Grid>
-
     </Grid>
     );
 };

@@ -13,6 +13,7 @@ const Hero = () => {
     justifyContent: "center",
     gap: theme.spacing(5),
     marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       alignItems: "center",
@@ -48,7 +49,7 @@ const Hero = () => {
             Bienvenido a Millán Tovar y Asociados
           </Typography>
           <Title variant="h1">
-            Lleva tu contabilidad sin problemas.
+            Lleva tu contabilidad con estrategias fiscales y empresariales
           </Title>
           <Typography variant="body2" sx={{fontSize: "18px", color: "#5A6473", my: 4}}>
             ¡Despreocúpate de tu contabilidad! Maneja tus asuntos contables con nosotros
