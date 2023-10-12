@@ -6,7 +6,9 @@ import ReactWhatsapp from 'react-whatsapp';
 const WhatsApp = () => {
   return (
     <Box>
-      <Button>Test</Button>
+      <Button onClick={() => {
+        window.open('https://wa.me/557621286506?text=Hola')
+      }}>Test</Button>
       <ReactWhatsapp number="55-762-128-6506" message="Hello World!!!">
         Mandar mensaje
       </ReactWhatsapp>
