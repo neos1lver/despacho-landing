@@ -18,7 +18,7 @@ const Direction = () => {
     <Box p={5}>
       <Typography variant="h5" fontWeight="bold" textAlign="center">Ubicación</Typography>
       <Typography variant="h5" textAlign="center">
-        Álvaro Obregón 1010, Carolina, 62190 Cuernavaca, Morelos.
+        Avenida Álvaro Obregón 1020 Interior 5
       </Typography>
       <MapContainer center={[18.9342, -99.2404]} zoom={15}>
         <TileLayer 
