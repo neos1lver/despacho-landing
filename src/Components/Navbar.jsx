@@ -99,7 +99,7 @@ export const Navbar = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: theme.spacing(5),
+    padding: theme.spacing(3),
     [theme.breakpoints.down("md")]: {
       padding: theme.spacing(2),
     },

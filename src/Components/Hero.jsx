@@ -1,7 +1,6 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import Navbar from "./Navbar";
 
 import heroImg from "../media/hero_illustration.png";
 import accountingImg from "../media/accounting-illustration.png";
@@ -33,7 +32,6 @@ const Hero = () => {
 
   return <Box sx={{backgroundColor: "#E6F0FF", minHeight: "80vh"}}>
     <Container>
-      <Navbar />
       <CustomBox>
         <Box sx={{flex: "1"}}>
           <Typography 
