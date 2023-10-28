@@ -14,6 +14,7 @@ import BadgeIcon from '@mui/icons-material/Badge';
 import GavelIcon from '@mui/icons-material/Gavel';
 import StoreIcon from '@mui/icons-material/Store';
 import CategoryIcon from '@mui/icons-material/Category';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 const Guide = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -301,6 +302,39 @@ const Guide = () => {
 
           <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
             Servicios
+          </Typography>
+        </Box>
+          </Card>
+      </Grid>
+
+      <Grid xs={12} md={4} alignItems="center" sx={{mt:3}}>
+        <Card sx={{m:4, height:'100%'}}>
+        <Box sx={{ mt:2, display: "flex", flexDirection: "column", alignItems: "center"}}>
+          <AutoStoriesIcon sx={{fontSize: 40}}/>
+          <Typography 
+            textAlign="center"
+            variant="h5" 
+            sx={{mt: 1, mb:3, color: "#3B3C45", fontWeight: "bold" }}
+          >
+            Defensa fiscal
+          </Typography>
+        </Box>
+
+        <Box sx={{ mx:4 }}>
+          <Typography variant="subtitle2"  gutterBottom sx={{color:"#3B3C45"}}>
+            Realización de medios de defensa fiscal
+          </Typography>
+
+          <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
+            Soluciones a requerimientos ante el SAT, IMSS o cualquier autoridad competente
+          </Typography>
+
+          <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
+            Planeación fiscal
+          </Typography>
+
+          <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
+            Estrategias fiscales
           </Typography>
         </Box>
           </Card>

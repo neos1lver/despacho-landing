@@ -1,4 +1,4 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box, Button, styled, Typography, Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
 
@@ -6,7 +6,7 @@ import heroImg from "../media/hero_illustration.png";
 import accountingImg from "../media/accounting-illustration.png";
 import CustomButton from "./CustomButton";
 
-const Hero = () => {
+const Hero = (props) => {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
@@ -21,7 +21,7 @@ const Hero = () => {
   }));
 
   const Title = styled(Typography)(({ theme }) => ({
-    fontSize: "64px",
+    fontSize: "58px",
     color: "#000336",
     fontWeight: "bold",
     margin: theme.spacing(4, 0, 4, 0),
@@ -30,41 +30,38 @@ const Hero = () => {
     },
   }));
 
-  return <Box sx={{backgroundColor: "#E6F0FF", minHeight: "80vh"}}>
-    <Container>
-      <CustomBox>
-        <Box sx={{flex: "1"}}>
+  return <Box sx={{backgroundColor: "#E6F0FF", height: "75vh"}}>
+    <Grid container spacing={1}>
+      <Grid item xs={12} sm={6}>
+        <Box sx={{flex: "1"}} m={4}>
           <Typography 
-            variant="body2" 
-            sx={{
-              fontSize: "18px", 
-              color: "#687690", 
-              fontWeight: "500", 
-              mt: 10, 
-              mb: 4
-            }}
+            variant="subtitle1" 
+            fontWeight='bold'
+            mt={3}
+            color="#5A6473"
           >
-            Bienvenido a Millán Tovar y Asociados
+            Despacho contable Millán, Tovar y Asociados
           </Typography>
-          <Title variant="h1">
-            Lleva tu contabilidad con estrategias fiscales y empresariales
-          </Title>
+          <Typography variant="h3" fontWeight="bold" color="#000336">
+            {props.title}
+          </Typography>
           <Typography variant="body2" sx={{fontSize: "18px", color: "#5A6473", my: 4}}>
-            ¡Despreocúpate de tu contabilidad! Maneja tus asuntos contables con nosotros
-            de forma segura y confiable
+            {props.subtitle1}
           </Typography>
           <CustomButton backgroundColor="#0F1B4C" color="#fff" buttonText="Sobre nosotros" heroBtn={true} />
-
         </Box>
-          <Box sx={{ flex: "1.25" }}>
+      </Grid>
+
+      <Grid item xs={12} sm={6}>
+          <Box>
             <img 
               src={accountingImg}
               alt="despachoContable"
-              style={{ maxWidth: "100%", marginBottom: "2rem"}}
+              style={{ height: "70%", width: "70%", marginTop: "1rem", marginBottom: "1rem"}}
             />
           </Box>
-      </CustomBox>
-    </Container>
+      </Grid>
+    </Grid>
   </Box>; 
 };
 

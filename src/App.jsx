@@ -9,6 +9,7 @@ import Properties from "./Components/Properties";
 import Direction from "./Components/Direction";
 import Slide from "./Components/Slide";
 import Navbar from "./Components/Navbar";
+import Email from "./Components/Email";
 
 // MUI
 import Fab from '@mui/material/Fab';
@@ -23,13 +24,13 @@ function App() {
 
   const heros = [
     {
-      title: "Estrategias fiscales",
-      subtitle1: "Movimientos relacionados",
+      title: "Lleva tu contabilidad con estrategias fiscales y empresariales",
+      subtitle1: "¡Despreocúpate de tu contabilidad! Maneja tus asuntos contables con nosotros de forma segura y confiable",
       img: 'https://cdn.pixabay.com/photo/2015/09/20/18/31/coins-948603_1280.jpg'
     },
     {
-      title: "Contabilidad general",
-      subtitle1: "Declaraciones fiscales",
+      title: "Lleva tu contabilidad general con nosotros",
+      subtitle1: "Manejamos todo lo relacionado con declaraciones fiscales",
       img: 'https://cdn.pixabay.com/photo/2016/04/25/23/30/house-1353389_1280.jpg'
     }
   ]
@@ -37,19 +38,18 @@ function App() {
   return ( 
     <>
       <Navbar />
-      <Carousel interval={10000} duration={1000}>
+      <Carousel interval={3000} duration={1000}>
         {
           heros.map((hero) => (
-            <div key={hero.title}>
-              <Slide title={hero.title} subtitle1={hero.subtitle1} img={hero.img} />
-            </div>
+            <Hero key={hero} title={hero.title} subtitle1={hero.subtitle1}/>
           ))
         }
       </Carousel>
-      <Hero />
+      {/*<Hero />*/}
       <Companies />
       <Guide />
       <Properties />
+      <Email />
       <Direction />
       {/*<WhatsApp />*/}
       <Fab 
