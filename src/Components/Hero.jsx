@@ -30,10 +30,10 @@ const Hero = (props) => {
     },
   }));
 
-  return <Box sx={{backgroundColor: "#E6F0FF", height: "75vh"}}>
+  return <Box sx={{backgroundColor: "#E6F0FF"}} height={{ xs: "950px", sm: "75vh" }}>
     <Grid container spacing={1}>
       <Grid item xs={12} sm={6}>
-        <Box sx={{flex: "1"}} m={4}>
+        <Box sx={{flex: "1"}} mx={{ xs: '30px', sm:'60px' }} my={{ xs: '30px', sm:'60px' }}>
           <Typography 
             variant="subtitle1" 
             fontWeight='bold'
@@ -57,7 +57,7 @@ const Hero = (props) => {
             <img 
               src={accountingImg}
               alt="despachoContable"
-              style={{ height: "70%", width: "70%", marginTop: "1rem", marginBottom: "1rem"}}
+              style={{ height: "80%", width: "80%", marginTop: "1rem", marginBottom: "1rem", marginLeft: "2rem"}}
             />
           </Box>
       </Grid>
