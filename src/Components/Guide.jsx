@@ -272,6 +272,14 @@ const Guide = () => {
         </Box>
 
         <Box sx={{ mx:4 }}>
+          <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
+            Comercio
+          </Typography>
+
+          <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
+            Servicios
+          </Typography>
+
           <Typography variant="subtitle2"  gutterBottom sx={{color:"#3B3C45"}}>
             Gobierno y servicios públicos
           </Typography>
@@ -294,14 +302,6 @@ const Guide = () => {
 
           <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
             Salud
-          </Typography>
-
-          <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
-            Comercio
-          </Typography>
-
-          <Typography variant="subtitle2" gutterBottom sx={{color:"#3B3C45"}}>
-            Servicios
           </Typography>
         </Box>
           </Card>

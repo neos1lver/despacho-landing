@@ -30,17 +30,25 @@ const Hero = (props) => {
     },
   }));
 
-  return <Box sx={{backgroundColor: "#E6F0FF"}} height={{ xs: "950px", sm: "75vh" }}>
-    <Grid container spacing={1}>
+  return <Box sx={{backgroundColor: "#E6F0FF"}} height={{ xs: "950px", sm: "65vh" }}>
+    <Grid container >
       <Grid item xs={12} sm={6}>
         <Box sx={{flex: "1"}} mx={{ xs: '30px', sm:'60px' }} my={{ xs: '30px', sm:'60px' }}>
           <Typography 
-            variant="subtitle1" 
+            variant="h5" 
             fontWeight='bold'
             mt={3}
             color="#5A6473"
           >
-            Despacho contable Millán, Tovar y Asociados
+            Millán, Tovar y Asociados
+          </Typography>
+          <Typography 
+            variant="subtitle2" 
+            fontWeight='bold'
+            color="#5A6473"
+            mb={1}
+          >
+            Contadores públicos
           </Typography>
           <Typography variant="h3" fontWeight="bold" color="#000336">
             {props.title}
@@ -53,13 +61,13 @@ const Hero = (props) => {
       </Grid>
 
       <Grid item xs={12} sm={6}>
-          <Box>
+        <Box>
             <img 
-              src={accountingImg}
+              src={props.img}
               alt="despachoContable"
-              style={{ height: "80%", width: "80%", marginTop: "1rem", marginBottom: "1rem", marginLeft: "2rem"}}
+              style={{ height: "100%" }}
             />
-          </Box>
+      </Box>
       </Grid>
     </Grid>
   </Box>; 

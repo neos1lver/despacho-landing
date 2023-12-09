@@ -7,9 +7,9 @@ import Companies from "./Components/Companies";
 import Guide from "./Components/Guide";
 import Properties from "./Components/Properties";
 import Direction from "./Components/Direction";
-import Slide from "./Components/Slide";
 import Navbar from "./Components/Navbar";
 import Email from "./Components/Email";
+import Values from "./Components/Values";
 
 // MUI
 import Fab from '@mui/material/Fab';
@@ -20,28 +20,32 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 // Carousel
 import Carousel from 'react-material-ui-carousel';
 
+// Imágenes
+import img1 from './media/sat-img.jpg';
+import img2 from './media/contabilidad.jpg';
+
 function App() {
 
   const heros = [
     {
       title: "Lleva tu contabilidad con estrategias fiscales y empresariales",
       subtitle1: "¡Despreocúpate de tu contabilidad! Maneja tus asuntos contables con nosotros de forma segura y confiable",
-      img: 'https://cdn.pixabay.com/photo/2015/09/20/18/31/coins-948603_1280.jpg'
+      img: img1
     },
     {
       title: "Lleva tu contabilidad general con nosotros",
       subtitle1: "Manejamos todo lo relacionado con declaraciones fiscales",
-      img: 'https://cdn.pixabay.com/photo/2016/04/25/23/30/house-1353389_1280.jpg'
+      img: img2 
     }
   ]
 
   return ( 
     <>
       <Navbar />
-      <Carousel interval={3000} duration={1000}>
+      <Carousel interval={3000} duration={1000} indicators={false}>
         {
           heros.map((hero) => (
-            <Hero key={hero} title={hero.title} subtitle1={hero.subtitle1}/>
+            <Hero key={hero} title={hero.title} subtitle1={hero.subtitle1} img={hero.img}/>
           ))
         }
       </Carousel>
@@ -49,6 +53,7 @@ function App() {
       <Companies />
       <Guide />
       <Properties />
+      <Values />
       <Email />
       <Direction />
       {/*<WhatsApp />*/}
