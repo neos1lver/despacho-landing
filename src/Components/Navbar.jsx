@@ -1,12 +1,18 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+
+// Íconos
 import MenuIcon from "@mui/icons-material/Menu";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import HomeIcon from "@mui/icons-material/Home";
 import ContactsIcon from "@mui/icons-material/Contacts";
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 import logoImg from "../media/logo.png";
 import { Container } from "@mui/system";
 import CustomButton from "./CustomButton";
@@ -21,7 +27,14 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-export const Navbar = () => {
+export const Navbar = ({ inicio, servicios, nosotros, valores, contacto, ubicacion }) => {
+  const scrollDown = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
   const [mobileMenu, setMobileMenu] = useState({
     left: false,
   })
@@ -45,16 +58,28 @@ export const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inicio", "Misión", "Servicios", "Valores", "Contacto"].map(
+        {["Inicio", "Servicios", "Nosotros", "Valores", "Contacto", "Ubicación"].map(
           (text, index) => ( 
             <ListItem key={text} dissablePadding>
-              <ListItemButton>
+              <ListItemButton 
+                onClick={() =>{
+                  scrollDown(
+                    index === 0 && inicio ||
+                    index === 1 && servicios ||
+                    index === 2 && nosotros ||
+                    index === 3 && valores ||
+                    index === 4 && contacto ||
+                    index === 5 && ubicacion
+                  )
+                }}
+              >
                 <ListItemIcon>
                   {index === 0 && <HomeIcon />}
-                  {index === 1 && <FeaturedPlayListIcon />}
-                  {index === 2 && <MiscellaneousServicesIcon />}
+                  {index === 1 && <DesignServicesIcon />}
+                  {index === 2 && <PeopleAltIcon />}
                   {index === 3 && <ListAltIcon />}
                   {index === 4 && <ContactsIcon />}
+                  {index === 5 && <LocationOnIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -130,11 +155,12 @@ export const Navbar = () => {
       </Box>
 
       <NavbarLinksBox>
-        <NavLink variant="body2">Inicio</NavLink>
-        <NavLink variant="body2">Misión</NavLink>
-        <NavLink variant="body2">Servicios</NavLink>
-        <NavLink variant="body2">Valores</NavLink>
-        <NavLink variant="body2">Contacto</NavLink>
+        <NavLink variant="body2" onClick={() => scrollDown(inicio)}>Inicio</NavLink>
+        <NavLink variant="body2" onClick={() => scrollDown(servicios)}>Servicios</NavLink>
+        <NavLink variant="body2" onClick={() => scrollDown(nosotros)}>Nosotros</NavLink>
+        <NavLink variant="body2" onClick={() => scrollDown(valores)}>Valores</NavLink>
+        <NavLink variant="body2" onClick={() => scrollDown(contacto)}>Contacto</NavLink>
+        <NavLink variant="body2" onClick={() => scrollDown(ubicacion)}>Ubicación</NavLink>
       </NavbarLinksBox>
 
     </Box>

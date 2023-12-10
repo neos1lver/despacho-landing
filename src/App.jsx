@@ -1,5 +1,5 @@
 // React
-// import { useState } from "react";
+import { useRef } from "react";
 
 // Componentes
 import Hero from "./Components/Hero";
@@ -13,6 +13,7 @@ import Values from "./Components/Values";
 
 // MUI
 import Fab from '@mui/material/Fab';
+import Box from '@mui/material/Box';
 
 // Icon
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -25,6 +26,14 @@ import img1 from './media/sat-img.jpg';
 import img2 from './media/contabilidad.jpg';
 
 function App() {
+
+  // Ubicaciones
+  const inicio = useRef();
+  const servicios = useRef();
+  const nosotros = useRef();
+  const valores = useRef();
+  const contacto = useRef();
+  const ubicacion = useRef();
 
   const heros = [
     {
@@ -41,7 +50,14 @@ function App() {
 
   return ( 
     <>
-      <Navbar />
+      <Navbar 
+        inicio={inicio}
+        servicios={servicios}
+        nosotros={nosotros} 
+        valores={valores}
+        contacto={contacto}
+        ubicacion={ubicacion}
+      />
       <Carousel interval={3000} duration={1000} indicators={false}>
         {
           heros.map((hero) => (
@@ -50,12 +66,24 @@ function App() {
         }
       </Carousel>
       {/*<Hero />*/}
-      <Companies />
-      <Guide />
-      <Properties />
-      <Values />
-      <Email />
-      <Direction />
+      <Box ref={inicio}>
+        <Companies />
+      </Box>
+      <Box ref={servicios}>
+        <Guide />
+      </Box>
+      <Box ref={nosotros}>
+        <Properties />
+      </Box>
+      <Box ref={valores}>
+        <Values />
+      </Box>
+      <Box ref={contacto}>
+        <Email />
+      </Box>
+      <Box ref={ubicacion}>
+        <Direction />
+      </Box>
       {/*<WhatsApp />*/}
       <Fab 
         color="success" 
