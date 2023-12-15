@@ -30,7 +30,7 @@ const Hero = (props) => {
     },
   }));
 
-  return <Box sx={{backgroundColor: "#E6F0FF"}} height={{ xs: "950px", sm: "65vh" }}>
+  return <Box sx={{backgroundColor: "#E6F0FF"}} height={{ xs: "880px", sm: "65vh" }}>
     <Grid container >
       <Grid item xs={12} sm={6}>
         <Box sx={{flex: "1"}} mx={{ xs: '30px', sm:'60px' }} my={{ xs: '30px', sm:'60px' }}>
@@ -65,9 +65,9 @@ const Hero = (props) => {
             <img 
               src={props.img}
               alt="despachoContable"
-              style={{ height: "100%" }}
+              style={{ width:'100%' }}
             />
-      </Box>
+        </Box>
       </Grid>
     </Grid>
   </Box>; 

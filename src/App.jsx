@@ -38,12 +38,12 @@ function App() {
   const heros = [
     {
       title: "Lleva tu contabilidad con estrategias fiscales y empresariales",
-      subtitle1: "¡Despreocúpate de tu contabilidad! Maneja tus asuntos contables con nosotros de forma segura y confiable",
+      subtitle1: "¡Despreocúpate de tu contabilidad! Maneja tus asuntos contables con nosotros de forma segura",
       img: img1
     },
     {
-      title: "Lleva tu contabilidad general con nosotros",
-      subtitle1: "Manejamos todo lo relacionado con declaraciones fiscales",
+      title: "Lleva tu contabilidad general con el apoyo de nosotros",
+      subtitle1: "Manejamos todos los trámites relacionados con declaraciones fiscales basados en nuestros valores",
       img: img2 
     }
   ]
